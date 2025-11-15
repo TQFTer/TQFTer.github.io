@@ -1,8 +1,4 @@
-/*
- *  Kube Framework 4/*!
- *  Draco HTML Template by @flamekaizar
- *  License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-*/
+
 
 /* =Reset
 -----------------------------------------------------------------------------*/
@@ -14,7 +10,7 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -245,21 +241,37 @@ img {
 /* =Typography
 -----------------------------------------------------------------------------*/
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 0.9375em;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 0.9em;
   line-height: 1.65em;
   background: #ffffff;
   color: #222222;
 }
 /* =Links
 -----------------------------------------------------------------------------*/
+
 a {
-  color: #ab4463;
+  color: #5e758e; /* Muted navy blue */
+  transition: all 0.2s ease; /* Smooth animation for color and transform */
+  display:inline-block; /* Allows transform to work properly */
+  text-decoration: underline;
 }
+
 a:focus,
 a:hover {
-  color: #de2c3b;
+  color: #0dc5c8; /* Brighter cyan on hover/focus */
+  transform: translateY(-3px);
+  outline: none;
+  text-shadow: 0 2px 6px rgba(143, 144, 144, 0.5); /* Glow effect on hover */
 }
+
+a:active {
+  color: #0dc5c8;
+  transform: translateY(-1px);
+  text-shadow: 0 1px 3px rgba(162, 165, 165, 0.4); /* Slightly reduced glow */
+}
+
+
 /* =Headings
 -----------------------------------------------------------------------------*/
 h1,
@@ -274,9 +286,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #000000;
+font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
+  font-weight: 500;
+  color: #525252;
   text-rendering: optimizeLegibility;
   margin: 0 0 .5em 0;
 }
@@ -284,37 +296,46 @@ h1,
 .h1,
 h2,
 .h2 {
+  font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   line-height: 1.1;
 }
 h3,
 .h3,
 h4,
 .h4 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   line-height: 1.3;
 }
 h1,
 .h1 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   font-size: 2.25em;
 }
 h2,
 .h2 {
-  font-size: 1.5em;
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
+  font-size: 1.4em;
+  font-weight:600;
   margin-bottom: .7em;
 }
 h3,
 .h3 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   font-size: 1.3125em;
 }
 h4,
 .h4 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   font-size: 1.125em;
 }
 h5,
 .h5 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   font-size: 1em;
 }
 h6,
 .h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,sans-serif;
   font-size: 0.75em;
   text-transform: uppercase;
 }
@@ -419,6 +440,7 @@ dfn[title] {
 }
 strong,
 b {
+  font-weight: bold !important;
   font-weight: 400;
 }
 em,
@@ -444,7 +466,7 @@ figcaption {
 }
 ins,
 u {
-  text-decoration: underline;
+  text-decoration: none;
 }
 mark {
   background-color: #ffc800;
@@ -461,7 +483,7 @@ var,
 output {
   font-size: 90%;
   font-style: normal;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 pre {
   margin-top: 1.65em;
@@ -509,7 +531,7 @@ button:focus {
 }
 textarea,
 select {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 1em;
   box-shadow: none;
 }
@@ -534,7 +556,7 @@ input[type="color"],
 input[type="time"],
 input[type="search"],
 input[type="datetime-local"] {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 1em;
   box-shadow: none;
   padding: 0.3em 0.35em;
@@ -635,6 +657,8 @@ table tfoot th,
 table tfoot td {
   color: rgba(0, 0, 0, 0.4);
 }
+
+
 /* =Grid
 -----------------------------------------------------------------------------*/
 .units-container:after,
@@ -1350,8 +1374,9 @@ input.input-smaller {
 -----------------------------------------------------------------------------*/
 /* NavBar */
 .navbar {
-  font-size: 105%;
-  margin-bottom: 1.65em;
+  display: flex;
+  font-size: 110%;
+  margin-bottom: 1.2em;
 }
 .navbar:after {
   content: "";
@@ -1397,8 +1422,8 @@ input.input-smaller {
   text-decoration: none;
 }
 .navbar a:hover {
-  color: #333f4b;
-  text-decoration: underline;
+  color: #2e67c2;
+  text-decoration: none;
 }
 .navbar li.active a,
 .navbar span {
@@ -1444,12 +1469,12 @@ input.input-smaller {
   z-index: 101;
 }
 /* Pills */
-.navbar-pills a,
+/* .navbar-pills a,
 .navbar-pills span {
   padding: 0.825em 1.65em;
 }
 .navbar-pills a:hover {
-  color: #0f0f0f;
+  color: #a30d0d;
   background: #eee;
 }
 .navbar-pills li.active a,
@@ -1464,7 +1489,7 @@ input.input-smaller {
 }
 .navbar-pills.navbar-right li {
   margin-left: 1px;
-}
+} */
 /* Fullwidth */
 .fullwidth ul {
   width: 100%;
@@ -1502,8 +1527,8 @@ input.input-smaller {
   text-decoration: none;
 }
 .nav a:hover {
-  color: #de2c3b;
-  text-decoration: underline;
+  color: #08f289;
+  text-decoration: none;
 }
 .nav li.active a,
 .nav span {
@@ -1526,7 +1551,7 @@ input.input-smaller {
   background: #f6f6f6;
 }
 .nav-stacked a:hover {
-  color: #000;
+  color: #0bf085;
   background: #eee;
 }
 .nav-stacked li.active a,
@@ -1593,8 +1618,8 @@ input.input-smaller {
 }
 .nav-tabs a:focus,
 .nav-tabs a:hover {
-  color: #0f0f0f;
-  text-decoration: underline;
+  color: #1467e4;
+  text-decoration: none;
   background-color: #eee;
 }
 .nav-tabs li.active a,
@@ -1660,15 +1685,15 @@ input.input-smaller {
   text-decoration: none;
 }
 .breadcrumbs a:hover {
-  color: #0f0f0f;
-  text-decoration: underline;
+  color: #0aeee6;
+  text-decoration: none;
 }
 .breadcrumbs li.active a,
 .breadcrumbs span,
 .breadcrumbs li.active a:hover {
   text-decoration: none;
   cursor: text;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(40, 83, 226, 0.4);
 }
 /* =Pagination
 -----------------------------------------------------------------------------*/
@@ -1711,7 +1736,7 @@ input.input-smaller {
 .pagination a:focus,
 .pagination a:hover {
   text-decoration: none;
-  background-color: #0f0f0f;
+  background-color: #970808;
   color: #fff;
 }
 /* =Buttons
@@ -1739,7 +1764,7 @@ input[type="submit"].btn {
 }
 .btn:hover,
 input[type="submit"].btn:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(8, 140, 222, 0.5);
   background: #b3b6b7;
 }
 .btn::-moz-focus-inner {
@@ -1789,7 +1814,7 @@ input[type="submit"].btn-outline:hover {
 .btn-active:hover,
 .btn[disabled]:hover,
 .btn-disabled:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(7, 237, 153, 0.5);
   background: #b3b6b7;
 }
 .btn-active {
@@ -2884,6 +2909,7 @@ input[type="submit"].btn-white.btn-outline.btn-active {
 .tooltip-theme-white {
   color: #000;
 }
+
 /* =Dropdown
 -----------------------------------------------------------------------------*/
 .dropdown {
@@ -2940,6 +2966,8 @@ ul.dropdown li.divider {
   border-top: 0;
   border-bottom: 4px solid;
 }
+
+
 /* =Livesearch
 -----------------------------------------------------------------------------*/
 .livesearch-box {
@@ -3620,7 +3648,7 @@ ul.dropdown li.divider {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   a[href]:after {
     content: " (" attr(href) ")";

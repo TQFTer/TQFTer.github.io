@@ -1,10 +1,312 @@
-/*
- *  Draco HTML Template
- *  License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- */
-
- h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+/* Fonts */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+font-family:  "Helvetica Neue",Helvetica,Tahoma,sans-serif;
+font-weight: 300;
 }
-a,p,li{font-family:"Lato",Arial,sans-serif;color:#4e4e4e;font-size:1em;line-height:1.75em}a:hover{text-decoration:none !important;color:#333 !important;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}.container{margin:auto;max-width:662px;padding:0 20px}@media only screen and (max-width: 767px){.intro img{display:block;margin-left:auto;margin-right:auto}footer{text-align:center}}.typed-cursor{opacity:1;font-weight:100;-webkit-animation:blink 0.7s infinite;-moz-animation:blink 0.7s infinite;-ms-animation:blink 0.7s infinite;-o-animation:blink 0.7s infinite;animation:blink 0.7s infinite}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-moz-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-ms-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-o-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}.main-nav{background:#f4f4f4;padding-top:23px}.main-nav nav ul li a{color:#a7a7a7}.main-nav nav ul li.active a{color:#4d4d4d}.section.second{margin-bottom:90px}.section .container{position:relative}.section .container:after{position:absolute;content:url(separator.png);left:20px}.section .container h1{text-transform:uppercase;margin-bottom:30px;position:relative}.intro{padding:95px 0px 70px 0px;overflow-x:hidden}.intro img{width:81px;height:81px;border-radius:99px}.intro .wrap{margin:30px 0px}.intro h1:before{position:absolute;left:-220px;top:-150px;font-size:270px;z-index:-1;color:#f4f4f4}.intro h1 span{font-size:47px}.work .work-list{margin-left:0px}.work .work-list li{list-style:none;font-size:0.9375em;color:#8c8c8c}.work .work-list li a{padding-bottom:5px;font-size:1.1875em;font-weight:700;text-decoration:none;border-bottom:1px solid #b3b3b3}.work .work-list li a:hover{border-bottom:1px solid #333}.award .award-list{margin-left:0px}.award .award-list li:first-child{font-size:0.9375em;color:#8c8c8c}.skills .skill-list{margin-left:0px}.skills .skill-list li:first-child{font-size:0.9375em;color:#8c8c8c}.quote{background:url(bg.jpg);padding:20px 0px;margin-top:120px}.quote h1{margin:100px 0px;padding:40px 20px;border:5px solid #fff;color:#fff}footer{padding:50px 0px 0px 0px}footer .social li{display:inline;margin-left:20px}footer .social li a{font-size:1.25em;color:#999}
+
+/* Main Text */
+p, li {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    color: #5f5f5f;
+    font-size: 1em;
+    line-height: 1.75em;
+}
+
+a {
+  color: #5e758e; /* Muted navy blue */
+  transition: all 0.2s ease; /* Smooth animation for color and transform */
+  display:inline-block; /* Allows transform to work properly */
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: #0dc5c8;
+  background-color: #ede9e4; 
+  transform: translateY(-3px);
+  outline: none;
+  text-shadow: 0 2px 6px rgba(143, 144, 144, 0.5); /* Glow effect on hover */
+}
+
+a:active {
+  color: #0dc5c8;
+  transform: translateY(-1px);
+  text-shadow: 0 1px 3px rgba(162, 165, 165, 0.4); /* Slightly reduced glow */
+}
+
+/* Layout */
+.container {
+    margin: auto;
+    max-width: 662px;
+    padding: 0 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .intro img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* Animation */
+.typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    animation: blink 0.7s infinite;
+}
+
+/* Decrease text size */
+.typed-text {
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Navigation */
+.main-nav {
+    background: rgb(179, 179, 179);
+    padding-top: 20px; /* Reduced from 23px */
+    padding-bottom: 0px; /* Add some bottom padding */
+}
+
+.main-nav nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2px;
+}
+
+.main-nav nav ul li {
+    position: relative;
+}
+
+.main-nav nav ul li a {
+    color: #838486;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+    background: linear-gradient(180deg, #b2b2b2 0%, #ededeb 100%);
+    text-decoration: none;
+    border-radius: 4px;
+    /* border: 1px solid #646464; */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    margin-bottom: -10px;
+    transform: none; /* Override default a:hover transform */
+    text-shadow: none; /* Override default a:hover text-shadow */
+    text-decoration: none;
+}
+
+.main-nav nav ul li a:hover {
+    color: #ffffff;  /* Change font to a given color on hover */
+    background: #868686; /* Use 'background' instead of 'background-color' */
+    border-color: #e2e2e2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-shadow: none; /* Override default a:hover text-shadow */
+}
+
+.main-nav nav ul li.active a {
+    color: #ffffff;
+    background: #0dc87d;  /* use 'background' here */
+    border-color: #0dc87d;
+}
+
+.main-nav nav ul li.active a:hover {
+    background: #0dc87d;  /* use 'background' here */
+    border-color: #0bb56f;
+}
+
+/* Dropdown menu (nested ul) */
+.main-nav nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  min-width: 190px; /* don’t shrink too far */
+  list-style: none;
+  list-style-position: inside; /* ✅ bullets inside */
+  margin-right: 5px;
+  padding: 5px 0;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+
+/* Show dropdown on hover */
+.main-nav nav ul li:hover > .dropdown {
+  display: block;
+}
+
+/* Dropdown links */
+.main-nav nav ul li .dropdown li a {
+  display: block;
+  padding: 5px 2px;
+  background: #fff;
+  color: #333;
+  font-size: 0.75rem;
+  border-radius: 0; /* reset */
+  box-shadow: none; /* reset */
+  margin-bottom: 0; /* reset */
+  margin-left: 15px;
+  margin-right: 0px;
+  text-align: left; /* align text to the left */
+}
+
+.main-nav nav ul li .dropdown li a:hover {
+  background: #525252;
+  color: #fff;
+}
+
+
+
+
+
+
+/* Sections */
+.section.second {
+    margin-bottom: 90px;
+}
+
+.section .container {
+    position: relative;
+}
+
+.section .container::after {
+    content: "";
+    /* display: block; */
+    /* height: 4px;             thickness of the line */
+    /* background-color: rgb(179, 179, 179);  color of the line */
+    margin-top: 0px;        space above the line
+    /* width: 30%;             span full container width */
+}
+
+.section .container h1 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Intro */
+.intro {
+    padding: 10px 0 70px 0;
+    overflow-x: hidden;
+}
+
+.intro img {
+    width: 81px;
+    height: 81px;
+    border-radius: 99px;
+}
+
+.intro .wrap {
+    margin: 30px 0;
+}
+
+.intro h1:before {
+    position: absolute;
+    left: -50px;
+    top: -30px;
+    font-size: 110px;
+    z-index: -1;
+    color: #f4f4f4; /* Light grey color for ZAJIA */
+}
+
+.intro h1 span {
+    font-size: 20px;
+}/* type text size change */
+
+/* Work */
+.work .work-list {
+    margin-left: 0;
+}
+
+.work .work-list li {
+    list-style: none;
+    font-size: 0.9375em;
+    color: #8c8c8c;
+}
+
+.work .work-list li a {
+    padding-bottom: 5px;
+    font-size: 1.1875em;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.work .work-list li a:hover {
+    border-bottom: 1px solid #333;
+}
+
+/* Awards */
+.award .award-list {
+    margin-left: 0;
+}
+
+.award .award-list li:first-child {
+    font-size: 0.9375em;
+    color: #8c8c8c;
+}
+
+/* Skills */
+.skills .skill-list {
+    margin-left: 0;
+}
+
+.skills .skill-list li:first-child {
+    font-size: 0.9375em;
+    color: #8c8c8c;
+}
+
+/* Quote */
+.quote {
+    background: url(bg.jpg) no-repeat center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    min-height: 400px;   /* increase for taller banner */
+    display: flex;
+    align-items: center; /* vertically center text */
+    justify-content: center; /* optional: center horizontally */
+    text-align: center;
+}
+
+
+.quote h1 {
+    margin: 100px 0;
+    padding: 40px 20px;
+    border: 4px solid #fff;
+    color: #fff;
+    font-size: 1.5rem;   /* adjust as needed */
+    line-height: 1.3;  /* optional: improve readability */
+}
+
+
+/* Footer */
+footer {
+    padding: 50px 0 0 0;
+}
+
+footer .social li {
+    display: inline;
+    margin-left: 20px;
+}
+
+footer .social li a {
+    font-size: 1.25em;
+    color: #999;
+}
